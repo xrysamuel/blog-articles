@@ -20,5 +20,5 @@
 var options = {
     fallbackLink: "<p>浏览器不支持内联 pdf 显示，请打开 <a href='[url]'>这个链接</a>。</p>",
 };
-PDFObject.embed("Notes/ma.pdf", "#ma-pdf");
+PDFObject.embed("Notes/MA.pdf", "#ma-pdf");
 </script>
