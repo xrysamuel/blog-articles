@@ -12,13 +12,19 @@
 </head>
 
 <body>
+  <nav>
+    <a href="#/">主页</a>
+    <a href="#/Coding/">学习编程</a>
+    <a href="#/Notes/">课程笔记</a>
+    <a href="#/Blogs/">博客文章</a>
+  </nav>
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
       loadSidebar: true, // 加载边栏
       subMaxLevel: 2, // 生成目录，设置生成目录的最大层级为 2
       name: 'Samuel\'s Blog',
-      loadNavbar: true, // 加载导航栏
+      loadNavbar: false, // 不加载导航栏
       auto2top: true, // 切换页面跳转到页面顶部
       themeColor: '#476f88', // 主题颜色
       copyCode: {
