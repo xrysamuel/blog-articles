@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="style/vue.css">
   <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
 </head>
 
@@ -22,7 +22,8 @@
   <script>
     window.$docsify = {
       loadSidebar: true, // 加载边栏
-      subMaxLevel: 2, // 生成目录，设置生成目录的最大层级为 2
+      subMaxLevel: 3, // 生成目录，设置生成目录的最大层级为 3
+      sidebarDisplayLevel: 1,
       name: 'Samuel\'s Blog',
       loadNavbar: false, // 不加载导航栏
       auto2top: true, // 切换页面跳转到页面顶部
@@ -42,8 +43,15 @@
         countable: true,
         fontsize: '0.8em',
         color: '#6d8da1',
-        language: 'chinese'
+        language: 'chinese',
       },
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function (html) {
+            Prism.highlightAll();
+          })
+        }
+      ],
     }
   </script>
   <!-- Docsify v4 -->
@@ -59,8 +67,15 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+  <link href="style/prism-one-light.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.js"></script>
+  
   <!--
   配色方案：
   - E23E57

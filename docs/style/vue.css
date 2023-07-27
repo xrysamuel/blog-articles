@@ -531,6 +531,11 @@ body.close .content {
         transition: transform .25s ease
     }
 
+    .markdown-section {
+        margin: 0 20px;
+        max-width: 95%;
+    }
+
     .app-nav,
     .github-corner {
         transition: transform .25s ease-out
@@ -747,7 +752,7 @@ body {
 }
 
 .app-sub-sidebar li:before {
-    content: "-";
+    content: "§";
     padding-right: 4px;
     float: left
 }
