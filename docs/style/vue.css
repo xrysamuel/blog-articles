@@ -505,7 +505,12 @@ body.close .content {
     }
 
     .app-nav {
-        margin-top: 16px
+        margin-top: 16px;
+        font-size: 5px
+    }
+
+    .app-nav>a {
+        margin: 0 .5rem;
     }
 
     .app-nav li ul {
