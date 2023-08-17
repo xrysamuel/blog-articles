@@ -49,14 +49,14 @@
       plugins: [
         function (hook, vm) {
           hook.doneEach(function() {
-            Prism.highlightAll();
+            Prism.highlightAll(); // prism.js
             $('img')
               .wrap('<span style="display:inline-block"></span>')
               .css('display', 'block')
               .parent()
               .zoom({
                 "on": "mouseover",
-              });
+              }); // zoom.js
           })
         }
       ],
@@ -64,27 +64,44 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
   <!-- Plugins -->
+  <!-- emoji support -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+  <!-- copy code -->
   <script src="//unpkg.com/docsify-copy-code@2"></script>
+
+  <!-- pagination -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- words count -->
   <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+
+  <!-- PDF embed -->
   <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
 
+  <!-- LaTeX support -->
   <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!-- PDF viewer -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
 
-
+  <!-- code highlighting -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <link href="//cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
   <link href="style/prism-one-light.css" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.js"></script>
 
+  <!-- image zooming -->
   <script src="plugins/zoom.js"></script>
+
+  <!-- xmind embed -->
+  <script src="https://unpkg.com/xmind-embed-viewer/dist/umd/xmind-embed-viewer.js"></script>
 
   <!--
   配色方案：
